@@ -395,6 +395,7 @@ public class VolumetricLightRenderer : MonoBehaviour
         if ((_volumeLightTexture.width != _camera.pixelWidth || _volumeLightTexture.height != _camera.pixelHeight))
             ChangeResolution();
         //#endif
+        Debug.Log("render to: ___" + _camera.stereoTargetEye + "___", _camera);
     }
 
     /// <summary>
