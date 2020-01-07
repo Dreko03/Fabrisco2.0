@@ -1,0 +1,470 @@
+fileFormatVersion: 2
+guid: 21b98c32588fd424a874018e096d9e3c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1920829522130327430
+    second: VFX_Collision_SpriteSheet_0
+  - first:
+      213: -6461672554501836143
+    second: VFX_Collision_SpriteSheet_1
+  - first:
+      213: 5148929147189696029
+    second: VFX_Collision_SpriteSheet_2
+  - first:
+      213: -3162676307321595439
+    second: VFX_Collision_SpriteSheet_3
+  - first:
+      213: 5651628111778380903
+    second: VFX_Collision_SpriteSheet_4
+  - first:
+      213: -2938835290283250785
+    second: VFX_Collision_SpriteSheet_5
+  - first:
+      213: 6360854257045214839
+    second: VFX_Collision_SpriteSheet_6
+  - first:
+      213: -489245657322224481
+    second: VFX_Collision_SpriteSheet_7
+  - first:
+      213: 2589865064633959746
+    second: VFX_Collision_SpriteSheet_8
+  - first:
+      213: -6141095923033901668
+    second: VFX_Collision_SpriteSheet_9
+  - first:
+      213: 8833551060597481923
+    second: VFX_Collision_SpriteSheet_10
+  - first:
+      213: 8741509262047859514
+    second: VFX_Collision_SpriteSheet_11
+  - first:
+      213: 8482927656335426096
+    second: VFX_Collision_SpriteSheet_12
+  - first:
+      213: -7836722703325968315
+    second: VFX_Collision_SpriteSheet_13
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: 4
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: iPhone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Windows Store Apps
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: VFX_Collision_SpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3132
+        width: 923
+        height: 522
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9931e294bebbe7342af2f558d7fcdd6f
+      internalID: 1920829522130327430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX_Collision_SpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 923
+        y: 3132
+        width: 923
+        height: 522
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 684242b92b7a7f14399885b4cb5b1706
+      internalID: -6461672554501836143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX_Collision_SpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2610
+        width: 923
+        height: 522
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a52059bf8773f04a9cd5181f08e6852
+      internalID: 5148929147189696029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX_Collision_SpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 923
+        y: 2610
+        width: 923
+        height: 522
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 772b81b3d56ae234399cc0b6bb74b90b
+      internalID: -3162676307321595439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX_Collision_SpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2088
+        width: 923
+        height: 522
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7aa0ed09a6efa174798788ce30303f7b
+      internalID: 5651628111778380903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX_Collision_SpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 923
+        y: 2088
+        width: 923
+        height: 522
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfa980c8c9ebac845983303d5e074361
+      internalID: -2938835290283250785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX_Collision_SpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1566
+        width: 923
+        height: 522
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21b7f5ce82d49924580dbe3c475cc382
+      internalID: 6360854257045214839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX_Collision_SpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 923
+        y: 1566
+        width: 923
+        height: 522
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f70f562b3147774898bf924ceb386d3
+      internalID: -489245657322224481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX_Collision_SpriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1044
+        width: 923
+        height: 522
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcfa49124a8885840a9959ef1fd14219
+      internalID: 2589865064633959746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX_Collision_SpriteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 923
+        y: 1044
+        width: 923
+        height: 522
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8459af860b42d8c4d98848f3bf43fd6c
+      internalID: -6141095923033901668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX_Collision_SpriteSheet_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 522
+        width: 923
+        height: 522
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4a2dac2624d4484aab91542fa3fcd10
+      internalID: 8833551060597481923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX_Collision_SpriteSheet_11
+      rect:
+        serializedVersion: 2
+        x: 923
+        y: 522
+        width: 923
+        height: 522
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d34f9a05a36cee4693508de54ba57e0
+      internalID: 8741509262047859514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX_Collision_SpriteSheet_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 923
+        height: 522
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52ed5cb12a43eaa47ae0be85e02cb699
+      internalID: 8482927656335426096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX_Collision_SpriteSheet_13
+      rect:
+        serializedVersion: 2
+        x: 923
+        y: 0
+        width: 923
+        height: 522
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26fb92c6329b1d54e9a3db6570f5814f
+      internalID: -7836722703325968315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 3cc57f8a7ac60c043839205f8f2d5832
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
