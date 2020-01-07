@@ -23,11 +23,13 @@ public class GameManager : MonoBehaviour
     public GameObject m_Museum;
     public Animator[] an;
     public float animSpeed;
+    public GameObject pisteDisco;
 
     // Start is called before the first frame update
     void Awake()
     {
         GPEs = FindObjectsOfType<ChangeTheWorld>();
+        pisteDisco.SetActive(false);
         //Time.captureFramerate = 90;
         //QualitySettings.vSyncCount = 0;
         //Application.targetFrameRate = 20;
@@ -39,11 +41,13 @@ public class GameManager : MonoBehaviour
         if (!discoActive)
         {
             tml_transition.Play();
+            pisteDisco.SetActive(true);
         }
     }
 
     public void Desactivate()
     {
+        pisteDisco.SetActive(false);
         discoActive = false;
         foreach (AudioSource As in AudioSources)
         {
