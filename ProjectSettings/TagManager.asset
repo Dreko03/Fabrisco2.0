@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - reversable
+  - Balloon
+  - Head
   layers:
   - Default
   - TransparentFX

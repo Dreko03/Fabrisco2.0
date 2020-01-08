@@ -5,7 +5,7 @@ using UnityEngine;
 public class SC_Balloon : MonoBehaviour
 {
     public float force;
-    public Rigidbody rb;
+    Rigidbody rb;
     // Start is called before the first frame update
     void Awake()
     {
@@ -13,8 +13,17 @@ public class SC_Balloon : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        rb.AddForce(new Vector3(0, force, 0));
+        if (!rb.isKinematic)
+        {
+            rb.AddForce(new Vector3(0, force, 0), ForceMode.Acceleration);
+        }
     }
+
+    public void OnDestroy()
+    {
+        
+    }
+
 }
