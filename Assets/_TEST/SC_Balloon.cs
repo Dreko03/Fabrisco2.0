@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SC_Balloon : MonoBehaviour
 {
+    public GameObject vfx_Explosion;
     public float force;
     Rigidbody rb;
     // Start is called before the first frame update
@@ -23,7 +24,7 @@ public class SC_Balloon : MonoBehaviour
 
     public void OnDestroy()
     {
-        
+        Instantiate(vfx_Explosion, transform.position, Quaternion.identity);
     }
 
 }
