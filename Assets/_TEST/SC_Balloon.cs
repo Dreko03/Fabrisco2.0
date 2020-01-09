@@ -24,7 +24,7 @@ public class SC_Balloon : MonoBehaviour
 
     public void OnDestroy()
     {
-        Instantiate(vfx_Explosion, transform.position, Quaternion.identity);
+        //Instantiate(vfx_Explosion, transform.position, Quaternion.identity);
     }
 
 }
