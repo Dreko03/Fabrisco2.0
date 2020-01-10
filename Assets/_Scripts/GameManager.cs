@@ -25,6 +25,9 @@ public class GameManager : MonoBehaviour
     public float animSpeed;
     public GameObject pisteDisco;
 
+    public GameObject table;
+    public Transform[] table_spawner;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -126,6 +129,12 @@ public class GameManager : MonoBehaviour
         foreach (AudioSource As in AudioSources)
         {
             As.Play();
+        }
+
+        foreach(Transform spawnTransform in table_spawner)
+        {
+            Instantiate(table, spawnTransform.position, Quaternion.identity);
+            print("Table Instanciée");
         }
     }
 
