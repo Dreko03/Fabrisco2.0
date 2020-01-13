@@ -9,6 +9,7 @@ public class SC_Sarbacane : MonoBehaviour
     GameObject lastBulletFire;
     float chronoEnd;
     public float timToWait = 2;
+    public float speed;
 
     // Start is called before the first frame update
     void Start()
@@ -31,7 +32,8 @@ public class SC_Sarbacane : MonoBehaviour
 
     void Shoot()
     {
-        Instantiate(bullet, embout.position, embout.rotation);
+        GameObject bulletFired = Instantiate(bullet, embout.position, embout.rotation);
+        bulletFired.GetComponent<Rigidbody>().AddForce(gameObject.transform.forward * -speed);
     }
 
     private void ResetChronoStat()

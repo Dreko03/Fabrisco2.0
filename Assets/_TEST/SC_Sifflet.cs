@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class SC_Sifflet : MonoBehaviour
 {
-
+    public AudioSource audio;
     public Animator an;
 
     // Start is called before the first frame update
     void Awake()
     {
         an = GetComponentInParent<Animator>();
+        audio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -19,6 +20,7 @@ public class SC_Sifflet : MonoBehaviour
         if (col.gameObject.tag == "Head")
         {
             an.SetBool("isWhistling", true);
+            audio.Play();
         }
     }
 
