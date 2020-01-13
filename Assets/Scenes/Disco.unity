@@ -3495,5 +3495,10 @@ PrefabInstance:
       propertyPath: m_Cookie
       value: 
       objectReference: {fileID: 8900000, guid: cee57d8d3ba957f4a80c926597a38910, type: 3}
+    - target: {fileID: 6689240204422894990, guid: 35aabf715f9a8454e8139a2f15595561,
+        type: 3}
+      propertyPath: m_Range
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35aabf715f9a8454e8139a2f15595561, type: 3}
