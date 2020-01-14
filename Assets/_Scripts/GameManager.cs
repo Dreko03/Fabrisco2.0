@@ -27,6 +27,8 @@ public class GameManager : MonoBehaviour
 
     public GameObject table;
     public Transform[] table_spawner;
+    public MeshRenderer MR_Musee;
+    public Material MAT_Musee_0, MAT_Musee_1;
 
     // Start is called before the first frame update
     void Awake()
@@ -38,6 +40,7 @@ public class GameManager : MonoBehaviour
         //Application.targetFrameRate = 20;
         //MAT_Museum = m_Museum.GetComponent<MeshRenderer>()
     }
+
 
     public void Activate()
     {
@@ -63,6 +66,8 @@ public class GameManager : MonoBehaviour
             reverseEvent.isChanged = false;
             reverseEvent.RevertChanges.Invoke();
         }
+
+        UnChange();
     }
 
     // Update is called once per frame
@@ -124,6 +129,7 @@ public class GameManager : MonoBehaviour
 
     public void TransitionEnd()
     {
+        Change();
         UI_BlackScreen.SetBool("BlackScreenON", false);
         discoActive = true;
         foreach (AudioSource As in AudioSources)
@@ -131,7 +137,7 @@ public class GameManager : MonoBehaviour
             As.Play();
         }
 
-        foreach(Transform spawnTransform in table_spawner)
+        foreach (Transform spawnTransform in table_spawner)
         {
             Instantiate(table, spawnTransform.position, Quaternion.identity);
             print("Table Instanciée");
@@ -144,12 +150,22 @@ public class GameManager : MonoBehaviour
 
         bool premier = false;
 
-        if(timers > 10 && !premier)
+        if (timers > 10 && !premier)
         {
             UI_Micro.GetComponent<Animator>().SetBool("isActive", true);
             premier = true;
         }
     }
 
+    public void Change()
+    {
+        MR_Musee.materials[5] = Resources.Load<Material>("MAT_Wall_2_Disco");
+        print("Change Material");
+    }
+
+    public void UnChange()
+    {
+        MR_Musee.materials[5] = MAT_Musee_0;
+    }
 
 }
