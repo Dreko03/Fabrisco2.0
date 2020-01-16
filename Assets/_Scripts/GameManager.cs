@@ -30,6 +30,8 @@ public class GameManager : MonoBehaviour
     public MeshRenderer MR_Musee;
     public Material MAT_Musee_0, MAT_Musee_1;
 
+    public bool isLate = false;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -48,6 +50,11 @@ public class GameManager : MonoBehaviour
         {
             tml_transition.Play();
             pisteDisco.SetActive(true);
+
+            if (isLate)
+            {
+
+            }
         }
     }
 
@@ -158,6 +165,7 @@ public class GameManager : MonoBehaviour
 
         if(Time.time > 30 && !deuxieme)
         {
+            isLate = true;
             deuxieme = true;
         }
     }

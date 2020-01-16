@@ -15,9 +15,15 @@ public class SC_Break : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (rb.velocity.y > 1f || rb.velocity.y < -1f)
+        //if (rb.velocity.y > 1f || rb.velocity.y < -1f)
+        //{
+        //    Debug.Log("Velocity at Col : " + rb.velocity.y);
+        //    Instantiate(ps_glass, transform.position, Quaternion.identity);
+        //    Destroy(gameObject);
+        //}
+
+        if (rb.velocity.magnitude > 1)
         {
-            Debug.Log("Velocity at Col : " + rb.velocity.y);
             Instantiate(ps_glass, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
