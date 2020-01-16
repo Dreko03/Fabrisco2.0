@@ -136,24 +136,29 @@ public class GameManager : MonoBehaviour
         {
             As.Play();
         }
-
-        foreach (Transform spawnTransform in table_spawner)
-        {
-            Instantiate(table, spawnTransform.position, Quaternion.identity);
-            print("Table Instanciée");
-        }
     }
 
     public void Timer()
     {
-        timers += Time.deltaTime;
+        //timers += Time.deltaTime;
 
         bool premier = false;
+        bool deuxieme = false;
 
-        if (timers > 10 && !premier)
+        //if (timers > 10 && !premier)
+        //{
+        //    UI_Micro.GetComponent<Animator>().SetBool("isActive", true);
+        //    premier = true;
+        //}
+        if (Time.time > 10 && !premier)
         {
             UI_Micro.GetComponent<Animator>().SetBool("isActive", true);
             premier = true;
+        }
+
+        if(Time.time > 30 && !deuxieme)
+        {
+            deuxieme = true;
         }
     }
 
@@ -166,6 +171,11 @@ public class GameManager : MonoBehaviour
     public void UnChange()
     {
         MR_Musee.materials[5] = MAT_Musee_0;
+    }
+
+    public void InstantiationBlackOut()
+    {
+        print("JE MARCHE !!!");
     }
 
 }
