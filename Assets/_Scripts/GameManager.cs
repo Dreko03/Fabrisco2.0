@@ -31,6 +31,7 @@ public class GameManager : MonoBehaviour
     public Material MAT_Musee_0, MAT_Musee_1;
 
     public bool isLate = false;
+    public Animator spotLight, direcLight;
 
     // Start is called before the first frame update
     void Awake()
@@ -150,7 +151,6 @@ public class GameManager : MonoBehaviour
         //timers += Time.deltaTime;
 
         bool premier = false;
-        bool deuxieme = false;
 
         //if (timers > 10 && !premier)
         //{
@@ -163,10 +163,11 @@ public class GameManager : MonoBehaviour
             premier = true;
         }
 
-        if(Time.time > 30 && !deuxieme)
+        if(Time.time > 20 && !isLate)
         {
+            direcLight.SetBool("Desactivate", true);
+            spotLight.SetBool("Activate", true);
             isLate = true;
-            deuxieme = true;
         }
     }
 
