@@ -13,7 +13,7 @@ public class EmissiveVR : MonoBehaviour
 
     
     void Update()
-    {
+    {         
         float intensity = 5.0f;
         Color final = Color.white * Mathf.LinearToGammaSpace(intensity);
         _renderer.material.SetColor("_EmissionColor", final);
