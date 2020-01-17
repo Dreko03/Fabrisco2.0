@@ -4,19 +4,20 @@ using UnityEngine;
 
 public class EmissiveVR : MonoBehaviour
 {
-    public MeshRenderer _renderer;
+    MeshRenderer _renderer;
 
     void Start()
-    {
-        
+    {       
+
     }
 
     
     void Update()
     {         
-        float intensity = 5.0f;
+        float intensity = 3.0f;
         _renderer = this.gameObject.GetComponent<MeshRenderer>();
-        Color final = Color.white * Mathf.LinearToGammaSpace(intensity);
+        Color final = Color.yellow * Mathf.GammaToLinearSpace(intensity);
+        Debug.Log(final);
         _renderer.material.SetColor("_EmissionColor", final);
         DynamicGI.SetEmissive(_renderer, final);
 
