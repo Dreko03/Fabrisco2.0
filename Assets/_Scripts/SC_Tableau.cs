@@ -14,15 +14,6 @@ public class SC_Tableau : MonoBehaviour
         InvokeRepeating("PaintingDisplay", 1, 0.05f);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        //for (int i = 0; i < texture.Length; i++)
-        //{
-        //    tableau.mainTexture = texture[i];
-        //}
-    }
-
     public void PaintingDisplay()
     {
         if (init == texture.Length)
