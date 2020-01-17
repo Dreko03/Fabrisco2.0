@@ -286,7 +286,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.07
+      scalar: 2.5
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -3789,7 +3789,7 @@ ParticleSystem:
         m_RotationOrder: 4
     minKillSpeed: 0
     maxKillSpeed: 10000
-    radiusScale: 1
+    radiusScale: 0.03
     collidesWith:
       serializedVersion: 2
       m_Bits: 4294967295
@@ -4768,7 +4768,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b41d1116a101a84499296ce28d16e6b9, type: 2}
+  - {fileID: 2100000, guid: 80c1aa36464abc744bfb77dc74f60256, type: 2}
   - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -4807,9 +4807,9 @@ ParticleSystemRenderer:
   m_ApplyActiveColorSpace: 1
   m_AllowRoll: 1
   m_VertexStreams: 00010304
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
-  m_Mesh1: {fileID: 0}
-  m_Mesh2: {fileID: 0}
+  m_Mesh: {fileID: 8743023520984771489, guid: 7964f684a953dbb4a9dc190feacf4b10, type: 3}
+  m_Mesh1: {fileID: 3070828633357695947, guid: 7964f684a953dbb4a9dc190feacf4b10, type: 3}
+  m_Mesh2: {fileID: 5828244030317791880, guid: 7964f684a953dbb4a9dc190feacf4b10, type: 3}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
 --- !u!114 &-1532821122705150869

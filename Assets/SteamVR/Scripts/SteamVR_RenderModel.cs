@@ -454,7 +454,7 @@ namespace Valve.VR
                         texture.Apply();
                     }
 
-                    material = new Material(shader != null ? shader : Shader.Find("Shader Graphs/SH_Controlers"));
+                    material = new Material(shader != null ? shader : Shader.Find("Standard"));
                     material.SetTexture("_MainTex", texture);
                     //material.hideFlags = HideFlags.DontUnloadUnusedAsset;
 

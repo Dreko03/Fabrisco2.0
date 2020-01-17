@@ -30,6 +30,9 @@ public class GameManager : MonoBehaviour
     public MeshRenderer MR_Musee;
     public Material MAT_Musee_0, MAT_Musee_1;
 
+    public bool isLate = false;
+    public Animator spotLight, direcLight;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -48,6 +51,11 @@ public class GameManager : MonoBehaviour
         {
             tml_transition.Play();
             pisteDisco.SetActive(true);
+
+            if (isLate)
+            {
+
+            }
         }
     }
 
@@ -136,24 +144,30 @@ public class GameManager : MonoBehaviour
         {
             As.Play();
         }
-
-        foreach (Transform spawnTransform in table_spawner)
-        {
-            Instantiate(table, spawnTransform.position, Quaternion.identity);
-            print("Table Instanciée");
-        }
     }
 
     public void Timer()
     {
-        timers += Time.deltaTime;
+        //timers += Time.deltaTime;
 
         bool premier = false;
 
-        if (timers > 10 && !premier)
+        //if (timers > 10 && !premier)
+        //{
+        //    UI_Micro.GetComponent<Animator>().SetBool("isActive", true);
+        //    premier = true;
+        //}
+        if (Time.time > 10 && !premier)
         {
             UI_Micro.GetComponent<Animator>().SetBool("isActive", true);
             premier = true;
+        }
+
+        if(Time.time > 20 && !isLate)
+        {
+            direcLight.SetBool("Desactivate", true);
+            spotLight.SetBool("Activate", true);
+            isLate = true;
         }
     }
 
@@ -166,6 +180,11 @@ public class GameManager : MonoBehaviour
     public void UnChange()
     {
         MR_Musee.materials[5] = MAT_Musee_0;
+    }
+
+    public void InstantiationBlackOut()
+    {
+        print("JE MARCHE !!!");
     }
 
 }
