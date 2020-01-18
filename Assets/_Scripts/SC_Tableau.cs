@@ -7,11 +7,21 @@ public class SC_Tableau : MonoBehaviour
     public Material tableau;
     public Texture[] texture;
     int init = 0;
-    // Start is called before the first frame update
+
+    public GameManager gm;
+
+    private void Awake()
+    {
+        gm = GetComponent<GameManager>();
+    }
+
     void Start()
     {
         init = 0;
-        InvokeRepeating("PaintingDisplay", 1, 0.05f);
+        if (gm.discoActive)
+        {
+            InvokeRepeating("PaintingDisplay", 1, 0.033f);
+        }
     }
 
     public void PaintingDisplay()

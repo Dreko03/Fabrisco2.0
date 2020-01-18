@@ -30,12 +30,15 @@ public class GameManager : MonoBehaviour
     public MeshRenderer MR_Musee;
     public Material MAT_Musee_0, MAT_Musee_1;
 
-    public bool isLate = false;
+    public bool isLate = false, isLilLate = false;
     public Animator spotLight, direcLight;
+
+    public MeshRenderer Musee, MuseeDisco;
 
     // Start is called before the first frame update
     void Awake()
     {
+        MuseeDisco.enabled = false;
         GPEs = FindObjectsOfType<ChangeTheWorld>();
         pisteDisco.SetActive(false);
         //Time.captureFramerate = 90;
@@ -51,6 +54,8 @@ public class GameManager : MonoBehaviour
         {
             tml_transition.Play();
             pisteDisco.SetActive(true);
+            isLate = true;
+            isLilLate = true;
 
             if (isLate)
             {
@@ -150,17 +155,12 @@ public class GameManager : MonoBehaviour
     {
         //timers += Time.deltaTime;
 
-        bool premier = false;
+       isLilLate = false;
 
-        //if (timers > 10 && !premier)
-        //{
-        //    UI_Micro.GetComponent<Animator>().SetBool("isActive", true);
-        //    premier = true;
-        //}
-        if (Time.time > 10 && !premier)
+        if (Time.time > 10 && !isLilLate)
         {
             UI_Micro.GetComponent<Animator>().SetBool("isActive", true);
-            premier = true;
+            isLilLate = true;
         }
 
         if(Time.time > 20 && !isLate)
@@ -173,13 +173,14 @@ public class GameManager : MonoBehaviour
 
     public void Change()
     {
-        MR_Musee.materials[5] = Resources.Load<Material>("MAT_Wall_2_Disco");
-        print("Change Material");
+        MuseeDisco.enabled = true;
+        Musee.enabled = false;
     }
 
     public void UnChange()
     {
-        MR_Musee.materials[5] = MAT_Musee_0;
+        Musee.enabled = true;
+        MuseeDisco.enabled = false; ;
     }
 
     public void InstantiationBlackOut()
