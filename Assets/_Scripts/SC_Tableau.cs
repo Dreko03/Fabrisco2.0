@@ -7,6 +7,7 @@ public class SC_Tableau : MonoBehaviour
     public Material tableau;
     public Texture[] texture;
     int init = 0;
+    public int base_Image, start_Loop;
 
     public GameManager gm;
 
@@ -15,20 +16,23 @@ public class SC_Tableau : MonoBehaviour
         gm = GetComponent<GameManager>();
     }
 
-    void Start()
+    private void Start()
     {
-        init = 0;
-        if (gm.discoActive)
-        {
-            InvokeRepeating("PaintingDisplay", 1, 0.033f);
-        }
+        init = base_Image;
+        Invoke("PaintingDisplay", 0f);
+    }
+
+    public void Tableau_Loop()
+    {
+        init = start_Loop;
+        InvokeRepeating("PaintingDisplay", 1, 0.033f);
     }
 
     public void PaintingDisplay()
     {
         if (init == texture.Length)
         {
-            init = 0;
+            init = start_Loop;
         }
 
         tableau.mainTexture = texture[init];

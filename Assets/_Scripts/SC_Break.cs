@@ -25,7 +25,7 @@ public class SC_Break : MonoBehaviour
         if (rb.velocity.magnitude > 1)
         {
             Instantiate(ps_glass, transform.position, Quaternion.identity);
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
 }

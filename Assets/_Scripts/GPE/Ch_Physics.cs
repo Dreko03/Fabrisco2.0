@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Ch_Physics : MonoBehaviour
 {
-    public ChangeTheWorld ctw;
-    public Animator an;
+    ChangeTheWorld ctw;
+    Animator an;
     bool changed = false;
     public List<Rigidbody> rigidbodiesToDesactivate;
 
@@ -24,12 +24,24 @@ public class Ch_Physics : MonoBehaviour
             {
                 rb.detectCollisions = false;
                 rb.useGravity = false;
+                rb.isKinematic = true;
             }
 
             Invoke("DisableAnimator", 1.1f);
             changed = true;
         }
-        else if(!ctw.isChanged && changed)
+
+        else if (!ctw.isChanged && !changed)
+        {
+            foreach (Rigidbody rb in rigidbodiesToDesactivate)
+            {
+                rb.detectCollisions = false;
+                rb.useGravity = false;
+                rb.isKinematic = true;
+            }
+        }
+
+        else if (!ctw.isChanged && changed)
         {
             foreach (Rigidbody rb in rigidbodiesToDesactivate)
             {
@@ -47,6 +59,7 @@ public class Ch_Physics : MonoBehaviour
         {
             rb.detectCollisions = true;
             rb.useGravity = true;
+            rb.isKinematic = false;
         }
 
         an.enabled = false;

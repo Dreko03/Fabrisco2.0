@@ -8,7 +8,7 @@ public class SC_Sarbacane : MonoBehaviour
     public GameObject bullet;
     GameObject lastBulletFire;
     float chronoEnd;
-    public float timToWait = 2;
+    public float timeToWait = 2;
     public float speed;
 
     // Start is called before the first frame update
@@ -38,6 +38,6 @@ public class SC_Sarbacane : MonoBehaviour
 
     private void ResetChronoStat()
     {
-        chronoEnd = timToWait + Time.time;
+        chronoEnd = timeToWait + Time.time;
     }
 }

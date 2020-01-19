@@ -35,6 +35,9 @@ public class GameManager : MonoBehaviour
 
     public MeshRenderer Musee, MuseeDisco;
 
+    public bool discoActivated = false;
+    public UnityEvent tableauG_Loop, tableauP_Loop;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -86,13 +89,21 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if(discoActive && !discoActivated)
+        {
+            tableauG_Loop.Invoke();
+            tableauP_Loop.Invoke();
+            discoActivated = true;
+        }
+
         foreach (Animator ans in an)
         {
             ans.SetFloat("Multi", animSpeed);
         }
         Timer();
         FPScount();
-        timeScale = Time.timeScale;
+        //timeScale = Time.timeScale;
 
         if (discoActive)
         {
@@ -180,7 +191,8 @@ public class GameManager : MonoBehaviour
     public void UnChange()
     {
         Musee.enabled = true;
-        MuseeDisco.enabled = false; ;
+        MuseeDisco.enabled = false;
+        discoActivated = false;
     }
 
     public void InstantiationBlackOut()
