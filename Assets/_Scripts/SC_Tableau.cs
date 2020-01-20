@@ -13,7 +13,7 @@ public class SC_Tableau : MonoBehaviour
 
     private void Awake()
     {
-        gm = GetComponent<GameManager>();
+        gm = GetComponentInParent<GameManager>();
     }
 
     private void Start()
