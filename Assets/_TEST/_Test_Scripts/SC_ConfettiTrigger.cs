@@ -19,7 +19,7 @@ public class SC_ConfettiTrigger : MonoBehaviour
         if (Vector3.Distance(Canon.transform.position, transform.position) > 0.5f && exploded == false)
         {
             ConfettiExplosion();
-            exploded = true;
+            //exploded = true;
         }
     }
 

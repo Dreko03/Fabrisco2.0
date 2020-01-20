@@ -7,27 +7,32 @@ public class SC_Tableau : MonoBehaviour
     public Material tableau;
     public Texture[] texture;
     int init = 0;
-    // Start is called before the first frame update
-    void Start()
+    public int base_Image, start_Loop;
+
+    public GameManager gm;
+
+    private void Awake()
     {
-        init = 0;
-        InvokeRepeating("PaintingDisplay", 1, 0.05f);
+        gm = GetComponent<GameManager>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        //for (int i = 0; i < texture.Length; i++)
-        //{
-        //    tableau.mainTexture = texture[i];
-        //}
+        init = base_Image;
+        Invoke("PaintingDisplay", 0f);
+    }
+
+    public void Tableau_Loop()
+    {
+        init = start_Loop;
+        InvokeRepeating("PaintingDisplay", 1, 0.033f);
     }
 
     public void PaintingDisplay()
     {
         if (init == texture.Length)
         {
-            init = 0;
+            init = start_Loop;
         }
 
         tableau.mainTexture = texture[init];
