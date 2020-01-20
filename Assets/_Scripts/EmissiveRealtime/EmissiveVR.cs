@@ -7,19 +7,17 @@ public class EmissiveVR : MonoBehaviour
     MeshRenderer _renderer;
 
     void Start()
-    {       
-
+    {
+        _renderer = this.gameObject.GetComponent<MeshRenderer>();
     }
 
     
     void Update()
     {         
-        float intensity = 3.0f;
-        _renderer = this.gameObject.GetComponent<MeshRenderer>();
-        Color final = Color.yellow * Mathf.GammaToLinearSpace(intensity);
-        Debug.Log(final);
+        float intensity = 3.0f;        
+        Color final = Color.yellow * Mathf.GammaToLinearSpace(intensity);        
         _renderer.material.SetColor("_EmissionColor", final);
-        DynamicGI.SetEmissive(_renderer, final);
-
-    }
+        Debug.Log("rendu:" +_renderer + final);
+        DynamicGI.SetEmissive(_renderer, final);       
+    }  
 }
