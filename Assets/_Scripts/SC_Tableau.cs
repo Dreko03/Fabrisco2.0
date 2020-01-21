@@ -16,7 +16,12 @@ public class SC_Tableau : MonoBehaviour
         gm = GetComponentInParent<GameManager>();
     }
 
-    private void Start()
+    public void Start()
+    {
+        Tableau_Start();
+    }
+
+    public void Tableau_Start()
     {
         init = base_Image;
         Invoke("PaintingDisplay", 0f);
