@@ -31,12 +31,14 @@ public class GameManager : MonoBehaviour
     public Material MAT_Musee_0, MAT_Musee_1;
 
     public bool isLate = false, isLilLate = false;
-    public Animator spotLight, direcLight;
+    public Animator spotLight, direcLight, planeEmissive;
 
     public MeshRenderer Musee, MuseeDisco;
 
     public bool discoActivated = false;
     public UnityEvent tableauG_Loop, tableauP_Loop;
+
+    public GameObject[] lightsToActivate;
 
     // Start is called before the first frame update
     void Awake()
@@ -55,20 +57,17 @@ public class GameManager : MonoBehaviour
     {
         if (!discoActive)
         {
+            planeEmissive.SetBool("Change", true);
             tml_transition.Play();
             pisteDisco.SetActive(true);
             isLate = true;
             isLilLate = true;
-
-            if (isLate)
-            {
-
-            }
         }
     }
 
     public void Desactivate()
     {
+        planeEmissive.SetBool("Change", false);
         pisteDisco.SetActive(false);
         discoActive = false;
         foreach (AudioSource As in AudioSources)
@@ -184,15 +183,25 @@ public class GameManager : MonoBehaviour
 
     public void Change()
     {
+        foreach (GameObject lights in lightsToActivate)
+        {
+            lights.SetActive(true);
+        }
+
         MuseeDisco.enabled = true;
         Musee.enabled = false;
     }
 
     public void UnChange()
     {
+        foreach (GameObject lights in lightsToActivate)
+        {
+            lights.SetActive(false);
+        }
+
         Musee.enabled = true;
         MuseeDisco.enabled = false;
-        discoActivated = false;
+        discoActivated = false; 
     }
 
     public void InstantiationBlackOut()
