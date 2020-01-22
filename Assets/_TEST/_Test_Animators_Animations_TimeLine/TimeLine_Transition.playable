@@ -15,7 +15,7 @@ MonoBehaviour:
   m_Time: 0
   m_Retroactive: 0
   m_EmitOnce: 0
-  m_Asset: {fileID: 11400000, guid: 4459e4f0c0f91da4fbf2a2e039ce1a17, type: 2}
+  m_Asset: {fileID: 0}
 --- !u!114 &-9021252434613502659
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -43,6 +43,7 @@ MonoBehaviour:
     - {fileID: -7342580996473925248}
     - {fileID: -1898822301950754472}
     - {fileID: -9103366059325752011}
+    - {fileID: 6472532152526597656}
 --- !u!114 &-8230083891878848658
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -74,7 +75,7 @@ MonoBehaviour:
   m_Time: 0
   m_Retroactive: 0
   m_EmitOnce: 0
-  m_Asset: {fileID: 11400000, guid: 4459e4f0c0f91da4fbf2a2e039ce1a17, type: 2}
+  m_Asset: {fileID: 0}
 --- !u!114 &-7241322811157974565
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -141,7 +142,7 @@ MonoBehaviour:
   m_Time: 0
   m_Retroactive: 0
   m_EmitOnce: 0
-  m_Asset: {fileID: 11400000, guid: 4459e4f0c0f91da4fbf2a2e039ce1a17, type: 2}
+  m_Asset: {fileID: 0}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,7 +162,6 @@ MonoBehaviour:
   - {fileID: -6499987700272869587}
   - {fileID: 701435284679973391}
   - {fileID: -7241322811157974565}
-  - {fileID: 6955709225497901651}
   m_FixedDuration: 0
   m_EditorSettings:
     m_Framerate: 60
@@ -319,7 +319,7 @@ MonoBehaviour:
   m_Time: 0.016666666666666666
   m_Retroactive: 0
   m_EmitOnce: 0
-  m_Asset: {fileID: 11400000, guid: 4459e4f0c0f91da4fbf2a2e039ce1a17, type: 2}
+  m_Asset: {fileID: 0}
 --- !u!114 &6383568428397081930
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -335,8 +335,8 @@ MonoBehaviour:
   m_Time: 0
   m_Retroactive: 0
   m_EmitOnce: 0
-  m_Asset: {fileID: 11400000, guid: 4459e4f0c0f91da4fbf2a2e039ce1a17, type: 2}
---- !u!114 &6955709225497901651
+  m_Asset: {fileID: 0}
+--- !u!114 &6472532152526597656
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -345,21 +345,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b46e36075dd1c124a8422c228e75e1fb, type: 3}
-  m_Name: Signal Track (2)
+  m_Script: {fileID: 11500000, guid: 15c38f6fa1940124db1ab7f6fe7268d1, type: 3}
+  m_Name: 
   m_EditorClassIdentifier: 
-  m_Version: 3
-  m_AnimClip: {fileID: 0}
-  m_Locked: 0
-  m_Muted: 0
-  m_CustomPlayableFullTypename: 
-  m_Curves: {fileID: 0}
-  m_Parent: {fileID: 11400000}
-  m_Children: []
-  m_Clips: []
-  m_Markers:
-    m_Objects:
-    - {fileID: 5970007069812958692}
+  m_Time: 0.016666666666666666
+  m_Retroactive: 0
+  m_EmitOnce: 0
+  m_Asset: {fileID: 11400000, guid: 6d5b609c9f9e7c84cba43d29c2210637, type: 2}
 --- !u!114 &9039073750123895545
 MonoBehaviour:
   m_ObjectHideFlags: 1

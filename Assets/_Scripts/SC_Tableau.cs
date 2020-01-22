@@ -8,7 +8,6 @@ public class SC_Tableau : MonoBehaviour
     public Texture[] texture;
     int init = 0;
     public int base_Image, start_Loop;
-
     public GameManager gm;
 
     private void Awake()

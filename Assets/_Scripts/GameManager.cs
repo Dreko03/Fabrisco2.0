@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
     public MeshRenderer Musee, MuseeDisco;
 
     public bool discoActivated = false;
-    public UnityEvent tableauG_Loop, tableauP_Loop;
+    public UnityEvent tableauG_Loop, tableauP_Loop, tableauG_Stop, tableauP_Stop;
 
     public GameObject[] lightsToActivate;
 
@@ -62,11 +62,14 @@ public class GameManager : MonoBehaviour
             pisteDisco.SetActive(true);
             isLate = true;
             isLilLate = true;
+            direcLight.SetBool("Desactivate", true);
+            spotLight.SetBool("Activate", false);
         }
     }
 
     public void Desactivate()
     {
+        direcLight.SetBool("Desactivate", false);
         planeEmissive.SetBool("Change", false);
         pisteDisco.SetActive(false);
         discoActive = false;
@@ -145,11 +148,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void TransitionBegin()
-    {
-        direcLight.SetBool("Desactivate", true);
-    }
-
     public void Transition()
     {
         UI_BlackScreen.SetBool("BlackScreenON", true);
@@ -205,14 +203,12 @@ public class GameManager : MonoBehaviour
             lights.SetActive(false);
         }
 
+        
+        tableauG_Stop.Invoke();
+        tableauP_Stop.Invoke();
         Musee.enabled = true;
         MuseeDisco.enabled = false;
         discoActivated = false; 
-    }
-
-    public void InstantiationBlackOut()
-    {
-        print("JE MARCHE !!!");
     }
 
 }

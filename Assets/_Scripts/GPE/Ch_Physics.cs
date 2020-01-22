@@ -15,7 +15,6 @@ public class Ch_Physics : MonoBehaviour
         an = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (ctw.isChanged && !changed)
@@ -61,7 +60,6 @@ public class Ch_Physics : MonoBehaviour
             rb.useGravity = true;
             rb.isKinematic = false;
         }
-
         an.enabled = false;
     }
 }
