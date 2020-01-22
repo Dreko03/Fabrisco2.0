@@ -145,6 +145,11 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void TransitionBegin()
+    {
+        direcLight.SetBool("Desactivate", true);
+    }
+
     public void Transition()
     {
         UI_BlackScreen.SetBool("BlackScreenON", true);
@@ -175,6 +180,7 @@ public class GameManager : MonoBehaviour
 
         if(Time.time > 20 && !isLate)
         {
+            
             direcLight.SetBool("Desactivate", true);
             spotLight.SetBool("Activate", true);
             isLate = true;
