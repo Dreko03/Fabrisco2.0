@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class SC_ConfettiTrigger : MonoBehaviour
 {
-    public GameObject Canon;
+    public GameObject Canon, opercule;
     public ParticleSystem ps_Confetti;
     public AudioSource as_Confetti;
     bool exploded = false;
+
     private void Awake()
     {
         ps_Confetti = Canon.GetComponent<ParticleSystem>();
@@ -19,7 +20,7 @@ public class SC_ConfettiTrigger : MonoBehaviour
         if (Vector3.Distance(Canon.transform.position, transform.position) > 0.5f && exploded == false)
         {
             ConfettiExplosion();
-            //exploded = true;
+            exploded = true;
         }
     }
 
@@ -27,5 +28,7 @@ public class SC_ConfettiTrigger : MonoBehaviour
     {
         ps_Confetti.Play();
         as_Confetti.Play();
+        opercule.SetActive(false);
+        
     }
 }

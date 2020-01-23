@@ -26,6 +26,11 @@ public class SC_Tableau : MonoBehaviour
         Invoke("PaintingDisplay", 0f);
     }
 
+    public void Tableau_Stop_Refreshing()
+    {
+        CancelInvoke();
+    }
+
     public void Tableau_Loop()
     {
         init = start_Loop;

@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
     public MeshRenderer Musee, MuseeDisco;
 
     public bool discoActivated = false;
-    public UnityEvent tableauG_Loop, tableauP_Loop, tableauG_Stop, tableauP_Stop;
+    public UnityEvent tableauG_Loop, tableauP_Loop, tableauG_Stop, tableauP_Stop, tableauG_CancelRefresh, tableauP_CancelRefresh;
 
     public GameObject[] lightsToActivate;
 
@@ -203,7 +203,9 @@ public class GameManager : MonoBehaviour
             lights.SetActive(false);
         }
 
-        
+
+        tableauG_CancelRefresh.Invoke();
+        tableauP_CancelRefresh.Invoke();
         tableauG_Stop.Invoke();
         tableauP_Stop.Invoke();
         Musee.enabled = true;
